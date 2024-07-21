@@ -9,17 +9,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   preset: 'node-server',
   srcDir: './src',
-  modules: [
-    '@nuxtjs/tailwindcss',
-    [
-      '@pinia/nuxt',
-      {
-        autoImports: ['defineStore', 'acceptHMRUpdate', 'useDayjs'],
-        storesDirs: ['./src/stores/**'],
-      },
-    ],
-    'nuxt-booster',
-  ],
+  modules: ['@nuxtjs/tailwindcss', [
+    '@pinia/nuxt',
+    {
+      autoImports: ['defineStore', 'acceptHMRUpdate', 'useDayjs'],
+      storesDirs: ['./src/stores/**'],
+    },
+  ], 
+  'nuxt-booster', 
+  "@nuxtjs/google-fonts"
+],
 
   booster: {
     detection: {
@@ -46,6 +45,16 @@ export default defineNuxtConfig({
     optimizePreloads: false,
     disableNuxtFontaine: true,
     disableNuxtImage: true,
+  },
+  googleFonts: {
+    families: {
+      Inter: '300..800',
+    },
+    display: 'swap',
+    preload: true,
+    useStylesheet: true,
+    base64: true,
+    download: true,
   },
   tailwindcss: {
     cssPath: ['~/assets/styles/main.scss', { injectPosition: 'first' }],
