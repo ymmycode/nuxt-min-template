@@ -30,7 +30,7 @@
 
 *::-webkit-scrollbar-thumb
 {
-  @apply bg-f-primary-orange;
+  @apply bg-blue-400;
 }
 
 html, body {
@@ -50,4 +50,3 @@ body{
 .full-height {
   height: calc(var(--vh, 1vh) * 100) !important;
 }
-
